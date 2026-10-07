@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Vehicles - Rento</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="brand">
+        Rento
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">
+            Home
+        </a>
+        <a href="browse.html" class="active">
+            Browse Vehicles
+        </a>
+        <a href="index.html#footer">
+            Services
+        </a>
+        <a href="index.html#footer">
+            About us
+        </a>
+        <a href="index.html#footer">
+            Contact
+        </a>
+    </div>
+
+    <div class="nav-auth">
+        <a href="login.html">
+            Log in
+        </a>
+        <a href="register.html">
+            Sign up
+        </a>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="browse-header">
+        <div>
+            <h1>
+                Browse Vehicles
+            </h1>
+            <p>
+                Find the right vehicle for your journey.
+            </p>
+        </div>
+    </div>
+
+    <div class="vehicle-filter">
+        <!-- Category -->
+        <div class="filter-group">
+            <label for="search-category">
+                Vehicle Category
+            </label>
+            <select id="search-category">
+                <option value="all">
+                    All Vehicles
+                </option>
+                <option value="Car">
+                    Cars
+                </option>
+                <option value="Bike">
+                    Bikes
+                </option>
+                <option value="Van">
+                    Vans
+                </option>
+            </select>
+        </div>
+
+        <!-- Brand -->
+        <div class="filter-group">
+            <label for="search-brand">
+                Brand
+            </label>
+            <select id="search-brand">
+                <option value="all">
+                    All Brands
+                </option>
+            </select>
+        </div>
+
+        <!-- Transmission -->
+        <div class="filter-group">
+            <label for="search-transmission">
+                Transmission
+            </label>
+            <select id="search-transmission">
+                <option value="all">
+                    All
+                </option>
+                <option value="Automatic">
+                    Automatic
+                </option>
+                <option value="Manual">
+                    Manual
+                </option>
+            </select>
+        </div>
+
+        <!-- Availability -->
+        <div class="filter-group">
+            <label for="search-status">
+                Availability
+            </label>
+            <select id="search-status">
+                <option value="all">
+                    All
+                </option>
+                <option value="available">
+                    Available
+                </option>
+                <option value="booked">
+                    Booked
+                </option>
+                <option value="maintenance">
+                    Maintenance
+                </option>
+            </select>
+        </div>
+
+        <button
+            type="button"
+            class="btn"
+            id="search-btn">
+            Search
+        </button>
+    </div>
+
+    <div class="results-header">
+        <h2>
+            Vehicles
+        </h2>
+        <span id="vehicle-count">
+            0 vehicles
+        </span>
+    </div>
+
+    <div
+        class="vehicle-grid"
+        id="vehicle-list">
+        <!-- JavaScript will insert vehicles -->
+    </div>
+</div>
+
+<footer class="footer" id="footer">
+    <div class="footer-content">
+        <div>
+            <div class="brand">Rento</div>
+            <p>Rent a vehicle in a few clicks. No phone calls, no paperwork.</p>
+        </div>
+        <div>
+            <h3>Quick links</h3>
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Vehicles</a>
+            <a href="index.html#footer">Services</a>
+            <a href="index.html#footer">About us</a>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <p>Kathmandu, Nepal</p>
+            <p>support@rento.com</p>
+            <p>+977 XXX-XXX-XXX</p>
+        </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Rento. All rights reserved.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="browse.js"></script>
+</body>
+</html>

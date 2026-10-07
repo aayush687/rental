@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Dashboard - Rento</title>
+
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="brand">
+        Rento
+    </div>
+
+    <div class="nav-links">
+        <a href="dashboard.html" class="active">
+            Home
+        </a>
+
+        <a href="browse-vehicles.html">
+            Browse Vehicles
+        </a>
+
+        <a href="my-bookings.html">
+            My Bookings
+        </a>
+
+        <a href="my-profile.html">
+            Profile
+        </a>
+    </div>
+
+    <div class="nav-auth customer-nav">
+        <a href="../public/index.html">
+            Logout
+        </a>
+    </div>
+
+</div>
+
+
+<div class="container customer-dashboard">
+
+    <!-- Welcome section -->
+    <div class="customer-welcome">
+
+        <div>
+            <h1>Welcome back!</h1>
+
+            <p>
+                Manage your bookings and find your next vehicle.
+            </p>
+        </div>
+
+        <a href="browse-vehicles.html" class="btn">
+            Browse Vehicles
+        </a>
+
+    </div>
+
+
+    <!-- Customer statistics -->
+    <div class="customer-stats">
+
+        <div class="customer-stat-card">
+
+            <div class="customer-stat-label">
+                Upcoming Bookings
+            </div>
+
+            <div
+                class="customer-stat-value"
+                id="upcoming-count"
+            >
+                0
+            </div>
+
+        </div>
+
+
+        <div class="customer-stat-card">
+
+            <div class="customer-stat-label">
+                Active Rental
+            </div>
+
+            <div
+                class="customer-stat-value"
+                id="active-count"
+            >
+                0
+            </div>
+
+        </div>
+
+
+        <div class="customer-stat-card">
+
+            <div class="customer-stat-label">
+                Completed
+            </div>
+
+            <div
+                class="customer-stat-value"
+                id="completed-count"
+            >
+                0
+            </div>
+
+        </div>
+
+
+        <div class="customer-stat-card">
+
+            <div class="customer-stat-label">
+                Cancelled
+            </div>
+
+            <div
+                class="customer-stat-value"
+                id="cancelled-count"
+            >
+                0
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Recent booking -->
+    <h2 class="customer-section-title">
+        Recent Booking
+    </h2>
+
+    <div
+        class="customer-booking-card"
+        id="recent-booking"
+    >
+        <!-- Booking inserted by dashboard.js -->
+    </div>
+
+
+    <!-- Quick actions -->
+    <h2 class="customer-section-title">
+        Quick actions
+    </h2>
+
+    <div class="customer-actions">
+
+        <a
+            href="browse-vehicles.html"
+            class="customer-action-card"
+        >
+
+            <div class="customer-action-icon">
+                🚗
+            </div>
+
+            <div>
+                <h3>Browse Vehicles</h3>
+
+                <p>
+                    Find a car, bike or van for your next trip.
+                </p>
+            </div>
+
+        </a>
+
+
+        <a
+            href="my-bookings.html"
+            class="customer-action-card"
+        >
+
+            <div class="customer-action-icon">
+                📋
+            </div>
+
+            <div>
+                <h3>My Bookings</h3>
+
+                <p>
+                    View and manage your rental bookings.
+                </p>
+            </div>
+
+        </a>
+
+
+        <a
+            href="my-profile.html"
+            class="customer-action-card"
+        >
+
+            <div class="customer-action-icon">
+                👤
+            </div>
+
+            <div>
+                <h3>My Profile</h3>
+
+                <p>
+                    View and update your account information.
+                </p>
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <!-- Available vehicles heading -->
+    <div class="customer-section-heading">
+
+        <div>
+
+            <h2>
+                Available Vehicles
+            </h2>
+
+            <p>
+                Vehicles you can book right now.
+            </p>
+
+        </div>
+
+        <a
+            href="browse-vehicles.html"
+            class="customer-view-link"
+        >
+            View all
+        </a>
+
+    </div>
+
+
+    <!-- Available vehicles -->
+    <div
+        class="vehicle-grid"
+        id="customer-vehicles"
+    >
+        <!-- Vehicles inserted by dashboard.js -->
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer
+    class="footer"
+    id="footer"
+>
+
+    <div class="footer-content">
+
+        <div>
+
+            <div class="brand">
+                Rento
+            </div>
+
+            <p>
+                Rent a vehicle in a few clicks.
+                No phone calls, no paperwork.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Kathmandu, Nepal
+            </p>
+
+            <p>
+                support@rento.com
+            </p>
+
+            <p>
+                +977 XXX-XXX-XXX
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <p class="footer-bottom">
+        &copy; 2026 Rento. All rights reserved.
+    </p>
+
+</footer>
+
+<script src="../public/auth.js"></script>
+<!-- Shared helper functions -->
+<script src="../public/data.js"></script>
+
+<!-- Customer Dashboard JavaScript -->
+<script src="dashboard.js"></script>
+
+</body>
+</html>

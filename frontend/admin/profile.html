@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rento - Admin Profile</title>
+
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+
+    <header class="navbar admin-navbar">
+
+        <div class="brand">
+            Rento
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="vehicles.html">
+                Vehicles
+            </a>
+
+            <a href="bookings.html">
+                Bookings
+            </a>
+
+            <a href="customers.html">
+                Customers
+            </a>
+
+            <a href="profile.html" class="active">
+                Profile
+            </a>
+
+        </nav>
+
+        <div class="nav-auth">
+
+            <span class="admin-name">
+                Admin
+            </span>
+
+            <a href="../public/index.html">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="admin-profile-page">
+
+        <div class="edit-profile-heading">
+
+            <h1>Admin Profile</h1>
+
+            <p>
+                Update your account information and password.
+            </p>
+
+        </div>
+
+
+        <div class="edit-profile-card">
+
+            <form id="admin-profile-form">
+
+                <!-- FULL NAME -->
+
+                <div class="edit-form-group">
+
+                    <label for="admin-name-input">
+                        Full Name
+                    </label>
+
+                    <input type="text" id="admin-name-input" placeholder="Enter your full name" required>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="edit-form-group">
+
+                    <label for="admin-email-input">
+                        Email Address
+                    </label>
+
+                    <input type="email" id="admin-email-input" placeholder="Enter your email address" required>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="edit-form-group">
+
+                    <label for="admin-phone-input">
+                        Phone Number
+                    </label>
+
+                    <input type="tel" id="admin-phone-input" placeholder="Enter your phone number">
+
+                </div>
+
+
+                <!-- ACCOUNT TYPE -->
+
+                <div class="edit-form-group">
+
+                    <label>
+                        Account Type
+                    </label>
+
+                    <input type="text" value="Administrator" disabled>
+
+                </div>
+
+
+                <!-- PASSWORD SECTION -->
+
+                <div class="edit-password-section">
+
+                    <h2>
+                        Change Password
+                    </h2>
+
+                    <p>
+                        Leave these fields empty if you do not want to change your password.
+                    </p>
+
+                </div>
+
+
+                <!-- NEW PASSWORD -->
+
+                <div class="edit-form-group">
+
+                    <label for="admin-password-input">
+                        New Password
+                    </label>
+
+                    <input type="password" id="admin-password-input" placeholder="Enter new password">
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="edit-form-group">
+
+                    <label for="admin-confirm-password-input">
+                        Confirm New Password
+                    </label>
+
+                    <input type="password" id="admin-confirm-password-input" placeholder="Confirm new password">
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <p id="admin-profile-message" class="profile-message"></p>
+
+
+                <!-- BUTTONS -->
+
+                <div class="edit-profile-buttons">
+
+                    <button type="button" class="edit-cancel-button" onclick="resetForm()">
+                        Reset
+                    </button>
+
+                    <button type="submit" class="edit-save-button">
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer class="admin-footer">
+
+        <div class="admin-footer-content">
+
+            <div>
+                <strong>Rento</strong>
+                <p>Vehicle Rental Management System</p>
+            </div>
+
+            <p>© 2026 Rento. All rights reserved.</p>
+
+        </div>
+
+    </footer>
+
+<script src="../public/auth.js"></script>
+<script src="profile.js"></script>
+
+</body>
+
+</html>

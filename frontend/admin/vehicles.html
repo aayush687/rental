@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rento - Manage Vehicles</title>
+
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+
+<header class="navbar admin-navbar">
+
+    <div class="brand">
+        Rento
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="vehicles.html" class="active">
+            Vehicles
+        </a>
+
+        <a href="bookings.html">
+            Bookings
+        </a>
+
+        <a href="customers.html">
+            Customers
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+    </nav>
+
+    <div class="nav-auth">
+
+        <span class="admin-name">
+            Admin
+        </span>
+
+        <a href="../public/index.html">
+            Logout
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="admin-main">
+
+    <section class="admin-page-header">
+
+        <div>
+
+            <h1>
+                Manage Vehicles
+            </h1>
+
+            <p>
+                Add, edit or remove vehicles from your fleet.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="admin-toolbar">
+
+        <div class="filter-group">
+
+            <label for="vehicle-search">
+                Search
+            </label>
+
+            <input
+                type="text"
+                id="vehicle-search"
+                placeholder="Search"
+            >
+
+        </div>
+
+
+        <div class="filter-group">
+
+            <label for="filter-category">
+                Category
+            </label>
+
+            <select id="filter-category">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="Car">
+                    Car
+                </option>
+
+                <option value="Bike">
+                    Bike
+                </option>
+
+                <option value="Van">
+                    Van
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="filter-group">
+
+            <label for="filter-status">
+                Status
+            </label>
+
+            <select id="filter-status">
+
+                <option value="all">
+                    All Statuses
+                </option>
+
+                <option value="available">
+                    Available
+                </option>
+
+                <option value="booked">
+                    Booked
+                </option>
+
+                <option value="maintenance">
+                    Maintenance
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="admin-toolbar-spacer"></div>
+
+
+        <button
+            type="button"
+            class="btn admin-add-btn"
+            onclick="openAddModal()"
+        >
+            + Add Vehicle
+        </button>
+
+    </section>
+
+
+    <section class="admin-section">
+
+        <div class="admin-table-wrapper">
+
+            <table class="admin-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Vehicle
+                        </th>
+
+                        <th>
+                            Category
+                        </th>
+
+                        <th>
+                            Brand
+                        </th>
+
+                        <th>
+                            Price / Day
+                        </th>
+
+                        <th>
+                            Transmission
+                        </th>
+
+                        <th>
+                            Seats
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Actions
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="vehicles-table-body">
+
+                    <tr>
+
+                        <td
+                            colspan="8"
+                            class="admin-empty"
+                        >
+                            Loading vehicles...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div
+    class="modal-overlay"
+    id="vehicle-modal-overlay"
+>
+
+    <div class="modal-box admin-modal-box">
+
+        <div class="admin-modal-header">
+
+            <h2 id="vehicle-modal-title">
+                Add Vehicle
+            </h2>
+
+            <button
+                type="button"
+                class="admin-modal-close"
+                onclick="closeVehicleModal()"
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+        <form id="vehicle-form">
+
+            <input
+                type="hidden"
+                id="vehicle-id"
+            >
+
+            <div class="form-group">
+
+                <label for="vehicle-name">
+                    Vehicle Name
+                </label>
+
+                <input
+                    type="text"
+                    id="vehicle-name"
+                    placeholder="e.g. Toyota Land Cruiser"
+                    required
+                >
+
+            </div>
+
+            <div class="admin-form-row">
+
+                <div class="form-group">
+
+                    <label for="vehicle-category">
+                        Category
+                    </label>
+
+                    <select
+                        id="vehicle-category"
+                        required
+                    >
+
+                        <option value="Car">
+                            Car
+                        </option>
+
+                        <option value="Bike">
+                            Bike
+                        </option>
+
+                        <option value="Van">
+                            Van
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="vehicle-brand">
+                        Brand
+                    </label>
+
+                    <input
+                        type="text"
+                        id="vehicle-brand"
+                        placeholder="e.g. Toyota"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="admin-form-row">
+
+                <div class="form-group">
+
+                    <label for="vehicle-price">
+                        Price / Day (Rs.)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="vehicle-price"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="vehicle-seats">
+                        Seats
+                    </label>
+
+                    <input
+                        type="number"
+                        id="vehicle-seats"
+                        min="1"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="admin-form-row">
+
+                <div class="form-group">
+
+                    <label for="vehicle-transmission">
+                        Transmission
+                    </label>
+
+                    <select
+                        id="vehicle-transmission"
+                        required
+                    >
+
+                        <option value="Automatic">
+                            Automatic
+                        </option>
+
+                        <option value="Manual">
+                            Manual
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="vehicle-status">
+                        Status
+                    </label>
+
+                    <select
+                        id="vehicle-status"
+                        required
+                    >
+
+                        <option value="available">
+                            Available
+                        </option>
+
+                        <option value="booked">
+                            Booked
+                        </option>
+
+                        <option value="maintenance">
+                            Maintenance
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="vehicle-image-file">
+                    Vehicle Photo
+                </label>
+
+                <input
+                    type="file"
+                    id="vehicle-image-file"
+                    accept="image/jpeg,image/png,image/webp,image/avif"
+                >
+
+                <small
+                    style="
+                        display:block;
+                        margin-top:6px;
+                        color:#777;
+                    "
+                >
+                    Select the vehicle photo from your computer.
+                </small>
+
+                <div
+                    id="vehicle-image-preview"
+                    style="
+                        margin-top:12px;
+                        min-height:10px;
+                    "
+                ></div>
+
+                <input
+                    type="hidden"
+                    id="vehicle-image"
+                >
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="admin-modal-buttons">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="closeVehicleModal()"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    Save Vehicle
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<footer class="admin-footer">
+
+    <div class="admin-footer-content">
+
+        <div>
+
+            <strong>
+                Rento
+            </strong>
+
+            <p>
+                Vehicle Rental Management System
+            </p>
+
+        </div>
+
+        <p>
+            © 2026 Rento. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="../public/auth.js"></script>
+<script src="../public/data.js"></script>
+<script src="vehicles.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign up - Hunters</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+<div class="brand">Rento</div>
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse Vehicles</a>
+    <a href="index.html#footer">Services</a>
+    <a href="index.html#footer">About us</a>
+    <a href="index.html#footer">Contact</a>
+</div>
+<div class="nav-auth">
+    <a href="login.html">Log in</a>
+    <a href="register.html">Sign up</a>
+</div>
+</div>
+
+<div class="form-box">
+<h2>Create an account</h2>
+
+<form id="register-form">
+    <div class="form-group">
+        <label for="name">Full name</label>
+        <input type="text" id="name" placeholder="Aayush Subedi">
+        <div class="error-text" id="name-error">Enter your full name.</div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="name@gmail.com">
+        <div class="error-text" id="email-error">Enter a valid email.</div>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" placeholder="XXXXXXXXXX">
+        <div class="error-text" id="phone-error">Enter a valid phone number.</div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="At least 8 characters">
+        <div class="error-text" id="password-error">Password must be at least 8 characters.</div>
+    </div>
+
+    <button type="submit" class="btn" style="width: 100%;">Sign up</button>
+    
+    <p class="auth-footer">Already have an account? <a href="login.html">Log in</a></p>
+</form>
+</div>
+
+<script src="data.js"></script>
+<script src="register.js"></script>
+</body>
+</html>

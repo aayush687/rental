@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Bookings - Rento</title>
+
+    <link
+        rel="stylesheet"
+        href="../public/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="navbar">
+
+    <div class="brand">
+        Rento
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Home
+        </a>
+
+        <a href="browse-vehicles.html">
+            Browse Vehicles
+        </a>
+
+        <a
+            href="my-bookings.html"
+            class="active"
+        >
+            My Bookings
+        </a>
+
+        <a href="my-profile.html">
+            Profile
+        </a>
+
+    </div>
+
+
+    <div class="nav-auth">
+
+        <a href="../public/index.html">
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+<main class="my-bookings-page">
+
+    <div class="my-bookings-container">
+
+
+        <!-- PAGE HEADING -->
+
+        <div class="my-bookings-heading">
+
+            <div>
+
+                <h1>
+                    My Bookings
+                </h1>
+
+                <p>
+                    View and manage your vehicle bookings.
+                </p>
+
+            </div>
+
+
+            <a
+                href="browse-vehicles.html"
+                class="browse-more-btn"
+            >
+                Browse Vehicles
+            </a>
+
+        </div>
+
+
+        <div
+            id="bookings-list"
+            class="bookings-list"
+        >
+        </div>
+
+        <div
+            id="empty-bookings"
+            class="empty-bookings"
+            style="display: none;"
+        >
+
+            <div class="empty-bookings-icon">
+                📋
+            </div>
+
+
+            <h2>
+                No Bookings Yet
+            </h2>
+
+
+            <p>
+                You haven't made any vehicle bookings yet.
+            </p>
+
+
+            <a
+                href="browse-vehicles.html"
+                class="confirmation-primary-btn"
+            >
+                Browse Vehicles
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-section">
+
+            <h3>
+                Rento
+            </h3>
+
+            <p>
+                Rent a vehicle easily and conveniently.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-section">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Kathmandu, Nepal
+            </p>
+
+            <p>
+                support@rento.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Rento. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+window.addEventListener("error", function (e) {
+
+    var bookingsList =
+        document.getElementById("bookings-list");
+
+
+    if (!bookingsList) {
+        return;
+    }
+
+
+    var text =
+        (e.target && e.target.src)
+
+        ? "Could not load file: " +
+          e.target.src
+
+        : "Error: " +
+          e.message +
+          " (" +
+          (e.filename || "").split("/").pop() +
+          ", line " +
+          e.lineno +
+          ")";
+
+
+    bookingsList.insertAdjacentHTML(
+        "beforebegin",
+
+        '<p style="' +
+        'color:#b00020;' +
+        'background:#fdecea;' +
+        'padding:12px;' +
+        'margin:12px 0;' +
+        'border-radius:6px;' +
+        '">' +
+        text +
+        '</p>'
+    );
+
+}, true);
+
+</script>
+
+
+<script src="../public/auth.js"></script>
+<!-- Shared helper functions -->
+<script src="../public/data.js"></script>
+
+<!-- My Bookings backend JavaScript -->
+<script src="my-bookings.js"></script>
+
+
+</body>
+
+</html>

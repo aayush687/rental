@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rento - Manage Bookings</title>
+
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+    <header class="navbar admin-navbar">
+
+        <div class="brand">
+            Rento
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="vehicles.html">
+                Vehicles
+            </a>
+
+            <a href="bookings.html" class="active">
+                Bookings
+            </a>
+
+            <a href="customers.html">
+                Customers
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+        <div class="nav-auth">
+
+            <span class="admin-name">
+                Admin
+            </span>
+
+            <a href="../public/index.html">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="admin-main">
+
+        <!-- Page heading -->
+
+        <section class="admin-page-header">
+
+            <div>
+                <h1>Manage Bookings</h1>
+
+                <p>
+                    View customer bookings and update their status.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="admin-toolbar">
+
+            <div class="filter-group">
+                <label for="booking-search">Search</label>
+                <input type="text" id="booking-search" placeholder="Search">
+            </div>
+
+            <div class="filter-group">
+                <label for="booking-filter-status">Status</label>
+                <select id="booking-filter-status">
+                    <option value="all">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="confirmed">Confirmed</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+
+        </section>
+
+        <section class="admin-section">
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Customer</th>
+                            <th>Vehicle</th>
+                            <th>Pickup</th>
+                            <th>Return</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="bookings-table-body">
+
+                        <tr>
+                            <td colspan="8" class="admin-empty">
+                                Loading bookings...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="admin-footer">
+
+        <div class="admin-footer-content">
+
+            <div>
+                <strong>Rento</strong>
+                <p>Vehicle Rental Management System</p>
+            </div>
+
+            <p>© 2026 Rento. All rights reserved.</p>
+
+        </div>
+
+    </footer>
+
+<script src="../public/auth.js"></script>
+<script src="../public/data.js"></script>
+<script src="bookings.js"></script>
+
+</body>
+
+</html>

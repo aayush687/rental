@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>My Profile - Rento</title>
+    <link
+        rel="stylesheet"
+        href="../public/style.css"
+    >
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="brand">
+        Rento
+    </div>
+
+    <div class="nav-links">
+        <a href="dashboard.html">
+            Home
+        </a>
+        <a href="browse-vehicles.html">
+            Browse Vehicles
+        </a>
+        <a href="my-bookings.html">
+            My Bookings
+        </a>
+        <a href="my-profile.html" class="active">
+            Profile
+        </a>
+    </div>
+    <div class="nav-auth">
+        <a href="../public/index.html">
+            Logout
+        </a>
+    </div>
+
+</div>
+
+<main class="profile-page">
+
+    <div class="profile-container">
+
+        <div class="profile-page-heading">
+            <div>
+                <h1>
+                    My Profile
+                </h1>
+                <p>
+                    Manage your personal information and account.
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-card">
+
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    ST
+                </div>
+
+                <div class="profile-header-info">
+                    <h2 id="profile-name">
+                        Aayush Subedi
+                    </h2>
+                    <p>
+                        Customer
+                    </p>
+                </div>
+
+                <a
+                    href="edit-profile.html"
+                    class="profile-edit-button"
+                >
+                    Edit Profile
+                </a>
+            </div>
+
+            <div class="profile-section">
+                <h2>
+                    Personal Information
+                </h2>
+                <div class="profile-information">
+                    <div class="profile-information-item">
+                        <span class="profile-label">
+                            Full Name
+                        </span>
+                        <strong id="profile-full-name">
+                            Aayush Subedi
+                        </strong>
+                    </div>
+
+                    <div class="profile-information-item">
+                        <span class="profile-label">
+                            Email Address
+                        </span>
+                        <strong id="profile-email">
+                            aayush@gmail.com
+                        </strong>
+                    </div>
+
+                    <div class="profile-information-item">
+                        <span class="profile-label">
+                            Phone Number
+                        </span>
+
+                        <strong id="profile-phone">
+                            Not added
+                        </strong>
+                    </div>
+
+                    <div class="profile-information-item">
+                        <span class="profile-label">
+                            Account Type
+                        </span>
+                        <strong>
+                            Customer
+                        </strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>
+                    Booking Summary
+                </h2>
+
+                <div class="profile-stats">
+                    <div class="profile-stat">
+                        <span class="profile-stat-number"
+                            id="total-bookings">
+                            0
+                        </span>
+
+                        <span class="profile-stat-label">
+                            Total Bookings
+                        </span>
+                    </div>
+
+                    <div class="profile-stat">
+                        <span class="profile-stat-number"
+                            id="pending-bookings">
+                            0
+                        </span>
+                        <span class="profile-stat-label">
+                            Pending
+                        </span>
+                    </div>
+
+                    <div class="profile-stat">
+                        <span class="profile-stat-number"
+                            id="confirmed-bookings">
+                            0
+                        </span>
+
+                        <span class="profile-stat-label">
+                            Confirmed
+                        </span>
+                    </div>
+
+                    <div class="profile-stat">
+                        <span class="profile-stat-number"
+                            id="completed-bookings">
+                            0
+                        </span>
+
+                        <span class="profile-stat-label">
+                            Completed
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-section profile-actions-section">
+                <h2>
+                    Account
+                </h2>
+
+                <div class="profile-actions">
+                    <a
+                        href="my-bookings.html"
+                        class="profile-action-button"
+                    >
+                        View My Bookings
+                    </a>
+
+                    <a
+                        href="edit-profile.html"
+                        class="profile-action-button"
+                    >
+                        Edit Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>
+                Rento
+            </h3>
+            <p>
+                Rent a vehicle easily and conveniently.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>
+                Contact
+            </h3>
+            <p>
+                Kathmandu, Nepal
+            </p>
+            <p>
+                support@rento.com
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Rento. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+
+<script src="../public/auth.js"></script>
+<!-- <script src="../public/data.js"></script> -->
+
+<script src="my-profile.js"></script>
+
+
+</body>
+
+</html>

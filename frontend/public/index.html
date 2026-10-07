@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Rento - Vehicle Rental</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<div class="navbar">
+
+    <div class="brand">
+        Rento
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="browse.html">
+            Browse Vehicles
+        </a>
+
+        <a href="index.html#footer">
+            Services
+        </a>
+
+        <a href="index.html#footer">
+            About us
+        </a>
+
+        <a href="index.html#footer">
+            Contact
+        </a>
+
+    </div>
+
+    <div class="nav-auth">
+
+        <a href="login.html">
+            Log in
+        </a>
+
+        <a href="register.html">
+            Sign up
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<div class="container">
+
+    <h1>
+        Rent a vehicle in a few clicks
+    </h1>
+
+
+    <!-- =====================================
+         LATEST ARRIVAL
+    ====================================== -->
+
+    <h2 style="margin-top: 30px;">
+        Latest arrival
+    </h2>
+
+    <div
+        class="featured-box"
+        id="featured-vehicle"
+    >
+    </div>
+
+
+    <!-- =====================================
+         QUICK SEARCH BAR
+    ====================================== -->
+
+    <div class="search-bar">
+
+        <div class="form-group">
+
+            <label for="search-category">
+                Category
+            </label>
+
+            <select id="search-category">
+
+                <option value="all">
+                    All categories
+                </option>
+
+                <option value="Car">
+                    Car
+                </option>
+
+                <option value="Bike">
+                    Bike
+                </option>
+
+                <option value="Van">
+                    Van
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="search-date">
+                Pick-up date
+            </label>
+
+            <input
+                type="date"
+                id="search-date"
+            >
+
+        </div>
+
+
+        <button
+            class="btn"
+            id="search-btn"
+        >
+            Search vehicles
+        </button>
+
+    </div>
+
+
+    <!-- =====================================
+         VEHICLE LIST
+    ====================================== -->
+
+    <div
+        class="vehicle-grid"
+        id="vehicle-list"
+    >
+    </div>
+
+
+    <!-- =====================================
+         WHY CHOOSE RENTO
+    ====================================== -->
+
+    <h2 style="margin-top: 60px;">
+        Why choose Rento
+    </h2>
+
+    <div class="features-grid">
+
+
+        <!-- Feature 1 -->
+
+        <div class="feature-box">
+
+            <div class="feature-icon">
+                🚗
+            </div>
+
+            <h3>
+                Wide fleet
+            </h3>
+
+            <p>
+                Cars, bikes, and vans in one place
+                — pick what fits your trip.
+            </p>
+
+        </div>
+
+
+        <!-- Feature 2 -->
+
+        <div class="feature-box">
+
+            <div class="feature-icon">
+                💸
+            </div>
+
+            <h3>
+                No hidden fees
+            </h3>
+
+            <p>
+                The price you see is the price you pay.
+                No surprise charges.
+            </p>
+
+        </div>
+
+
+        <!-- Feature 3 -->
+
+        <div class="feature-box">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Instant booking
+            </h3>
+
+            <p>
+                Book online in minutes — no calls,
+                no paperwork, no waiting.
+            </p>
+
+        </div>
+
+
+        <!-- Feature 4 -->
+
+        <div class="feature-box">
+
+            <div class="feature-icon">
+                🛟
+            </div>
+
+            <h3>
+                24/7 support
+            </h3>
+
+            <p>
+                Need help during your rental?
+                Our team is always reachable.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer
+    class="footer"
+    id="footer"
+>
+
+    <div class="footer-content">
+
+
+        <!-- Footer Brand -->
+
+        <div>
+
+            <div class="brand">
+                Rento
+            </div>
+
+            <p>
+                Rent a vehicle in a few clicks.
+                No phone calls, no paperwork.
+            </p>
+
+        </div>
+
+
+        <!-- Quick Links -->
+
+        <div>
+
+            <h3>
+                Quick links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="browse.html">
+                Browse Vehicles
+            </a>
+
+            <a href="index.html#footer">
+                Services
+            </a>
+
+            <a href="index.html#footer">
+                About us
+            </a>
+
+        </div>
+
+
+        <!-- Contact -->
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Kathmandu, Nepal
+            </p>
+
+            <p>
+                support@rento.com
+            </p>
+
+            <p>
+                +977 XXX-XXX-XXX
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <p class="footer-bottom">
+        &copy; 2026 Rento. All rights reserved.
+    </p>
+
+</footer>
+
+<script src="index.js"></script>
+
+</body>
+
+</html>

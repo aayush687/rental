@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rento - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+
+    <header class="navbar admin-navbar">
+
+        <div class="brand">
+            Rento
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="vehicles.html">
+                Vehicles
+            </a>
+
+            <a href="bookings.html">
+                Bookings
+            </a>
+
+            <a href="customers.html">
+                Customers
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+        <div class="nav-auth">
+
+            <span class="admin-name">
+                Admin
+            </span>
+
+            <a href="../public/index.html">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="admin-main">
+
+        <!-- Page heading -->
+
+        <section class="admin-page-header">
+
+            <div>
+                <h1>Admin Dashboard</h1>
+
+                <p>
+                    Welcome back, Admin. Here's an overview of your rental system.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="admin-stats">
+
+            <!-- Total Vehicles -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    🚗
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <p class="admin-stat-label">
+                        Total Vehicles
+                    </p>
+
+                    <h2 id="total-vehicles">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Available Vehicles -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ✓
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <p class="admin-stat-label">
+                        Available Vehicles
+                    </p>
+
+                    <h2 id="available-vehicles">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Total Bookings -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    📋
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <p class="admin-stat-label">
+                        Total Bookings
+                    </p>
+
+                    <h2 id="total-bookings">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pending -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ⏳
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <p class="admin-stat-label">
+                        Pending Bookings
+                    </p>
+
+                    <h2 id="pending-bookings">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Confirmed -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ✓
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <p class="admin-stat-label">
+                        Confirmed Bookings
+                    </p>
+
+                    <h2 id="confirmed-bookings">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Completed -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon">
+                    ✓
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <p class="admin-stat-label">
+                        Completed Bookings
+                    </p>
+
+                    <h2 id="completed-bookings">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="admin-section">
+
+            <div class="admin-section-header">
+
+                <div>
+                    <h2>
+                        Recent Bookings
+                    </h2>
+
+                    <p>
+                        Latest vehicle rental bookings.
+                    </p>
+                </div>
+
+                <a href="bookings.html" class="admin-view-link">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Booking ID
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Vehicle
+                            </th>
+
+                            <th>
+                                Pickup
+                            </th>
+
+                            <th>
+                                Return
+                            </th>
+
+                            <th>
+                                Total
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="recent-bookings">
+
+                        <tr>
+
+                            <td colspan="7" class="admin-empty">
+                                Loading bookings...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section class="admin-section">
+
+            <div class="admin-section-header">
+
+                <div>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                    <p>
+                        Manage your rental system quickly.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-actions">
+
+
+                <!-- Vehicles -->
+
+                <a href="vehicles.html" class="admin-action-card">
+
+                    <div class="admin-action-icon">
+                        🚗
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Manage Vehicles
+                        </h3>
+
+                        <p>
+                            Add, edit or remove vehicles.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Bookings -->
+
+                <a href="bookings.html" class="admin-action-card">
+
+                    <div class="admin-action-icon">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Manage Bookings
+                        </h3>
+
+                        <p>
+                            View and manage customer bookings.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Customers -->
+
+                <a href="customers.html" class="admin-action-card">
+
+                    <div class="admin-action-icon">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Manage Customers
+                        </h3>
+
+                        <p>
+                            View registered customers.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="admin-footer">
+
+        <div class="admin-footer-content">
+
+            <div>
+
+                <strong>
+                    Rento
+                </strong>
+
+                <p>
+                    Vehicle Rental Management System
+                </p>
+
+            </div>
+
+            <p>
+                © 2026 Rento. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+<script src="../public/auth.js"></script>
+<script src="../public/data.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>

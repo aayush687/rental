@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Profile - Rento</title>
+
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="brand">
+            Rento
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="dashboard.html">
+                Home
+            </a>
+
+            <a href="browse-vehicles.html">
+                Browse Vehicles
+            </a>
+
+            <a href="my-bookings.html">
+                My Bookings
+            </a>
+
+            <a href="my-profile.html" class="active">
+                Profile
+            </a>
+
+        </nav>
+        <div class="nav-auth">
+            <a href="../public/index.html">Logout</a>
+        </div>
+    </header>
+
+
+    <main class="edit-profile-page">
+        <div class="edit-profile-container">
+            <!-- PAGE HEADING -->
+            <div class="edit-profile-heading">
+                <h1>
+                    Edit Profile
+                </h1>
+                <p>
+                    Update your personal information and account details.
+                </p>
+            </div>
+
+            <div class="edit-profile-card">
+                <form id="edit-profile-form">
+
+                    <div class="edit-form-group">
+                        <label for="edit-name">
+                            Full Name
+                        </label>
+                        <input type="text" id="edit-name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="edit-form-group">
+                        <label for="edit-email">
+                            Email Address
+                        </label>
+                        <input type="email" id="edit-email" name="email" placeholder="Enter your email address"
+                            required>
+                    </div>
+
+                    <div class="edit-form-group">
+                        <label for="edit-phone">
+                            Phone Number
+                        </label>
+                        <input type="tel" id="edit-phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="edit-form-group">
+                        <label>
+                            Account Type
+                        </label>
+                        <input type="text" value="Customer" disabled>
+                    </div>
+
+
+                    <div class="edit-password-section">
+                        <h2>
+                            Change Password
+                        </h2>
+                        <p>
+                            Leave these fields empty if you do not want to change your password.
+                        </p>
+                    </div>
+
+                    <div class="edit-form-group">
+                        <label for="edit-password">
+                            New Password
+                        </label>
+                        <input type="password" id="edit-password" name="password" placeholder="Enter new password">
+                    </div>
+
+                    <div class="edit-form-group">
+                        <label for="edit-confirm-password">
+                            Confirm New Password
+                        </label>
+                        <input type="password" id="edit-confirm-password" name="confirm-password"
+                            placeholder="Confirm new password">
+                    </div>
+
+                    <p id="profile-message" class="profile-message">
+                    </p>
+
+                    <div class="edit-profile-buttons">
+                        <a href="my-profile.html" class="edit-cancel-button">
+                            Cancel
+                        </a>
+                        <button type="submit" class="edit-save-button">
+                            Save Changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>Rento</h2>
+                <p>
+                    Simple and convenient vehicle rental.
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="dashboard.html">
+                    Home
+                </a>
+                <a href="browse-vehicles.html">
+                    Browse Vehicles
+                </a>
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+                <a href="my-profile.html">
+                    Profile
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                © 2026 Rento. All rights reserved.
+            </p>
+        </div>
+    </footer>
+<script src="../public/auth.js"></script>
+<script src="edit-profile.js"></script>
+
+</body>
+
+</html>

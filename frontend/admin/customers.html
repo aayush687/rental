@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rento - Manage Customers</title>
+
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+
+    <header class="navbar admin-navbar">
+
+        <div class="brand">
+            Rento
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="vehicles.html">
+                Vehicles
+            </a>
+
+            <a href="bookings.html">
+                Bookings
+            </a>
+
+            <a href="customers.html" class="active">
+                Customers
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+        <div class="nav-auth">
+
+            <span class="admin-name">
+                Admin
+            </span>
+
+            <a href="../public/index.html">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="admin-main">
+
+        <!-- Page heading -->
+
+        <section class="admin-page-header">
+
+            <div>
+                <h1>Manage Customers</h1>
+
+                <p>
+                    Everyone who has booked a vehicle through Rento.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="admin-toolbar">
+
+            <div class="filter-group">
+                <label for="customer-search">Search</label>
+                <input type="text" id="customer-search" placeholder="Search">
+            </div>
+
+        </section>
+
+        <section class="admin-section">
+
+            <div class="admin-table-wrapper">
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Customer</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Total Bookings</th>
+                            <th>Total Spent</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="customers-table-body">
+
+                        <tr>
+                            <td colspan="6" class="admin-empty">
+                                Loading customers...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="admin-footer">
+
+        <div class="admin-footer-content">
+
+            <div>
+                <strong>Rento</strong>
+                <p>Vehicle Rental Management System</p>
+            </div>
+
+            <p>© 2026 Rento. All rights reserved.</p>
+
+        </div>
+
+    </footer>
+
+<script src="../public/auth.js"></script>
+<script src="../public/data.js"></script>
+<script src="customers.js"></script>
+
+</body>
+
+</html>

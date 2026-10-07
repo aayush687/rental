@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Details - Rento</title>
+
+    <link
+        rel="stylesheet"
+        href="../public/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="brand">
+        Rento
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="dashboard.html">
+            Home
+        </a>
+
+        <a href="browse-vehicles.html">
+            Browse Vehicles
+        </a>
+
+        <a href="my-bookings.html">
+            My Bookings
+        </a>
+
+        <a
+            href="my-profile.html">
+            Profile
+        </a>
+
+
+    </nav>
+    <div class="nav-auth">
+        <a href="../public/index.html">
+            Logout
+        </a>
+
+    </div>
+
+</header>
+
+<main class="booking-details-page">
+
+    <div class="booking-details-container">
+
+
+        <!-- PAGE HEADING -->
+
+        <div class="booking-details-heading">
+
+            <p class="booking-details-subtitle">
+                BOOKING INFORMATION
+            </p>
+
+            <h1>
+                Booking Details
+            </h1>
+
+            <p>
+                View the complete information for your vehicle booking.
+            </p>
+
+        </div>
+
+        <div
+            class="booking-details-card"
+            id="booking-details-card">
+
+
+            <!-- VEHICLE SECTION -->
+
+            <div class="booking-details-vehicle">
+
+                <div class="booking-details-image-container">
+
+                    <img
+                        id="booking-vehicle-image"
+                        src=""
+                        alt="Vehicle">
+
+                </div>
+
+
+                <div class="booking-details-vehicle-info">
+
+                    <span class="booking-details-label">
+                        VEHICLE
+                    </span>
+
+                    <h2 id="booking-vehicle-name">
+                        —
+                    </h2>
+
+                    <p id="booking-vehicle-price">
+                        —
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="booking-status"
+                    id="booking-status">
+
+                    Pending
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOOKING INFORMATION -->
+
+            <div class="booking-details-section">
+
+                <h2>
+                    Booking Information
+                </h2>
+
+
+                <div class="booking-details-grid">
+
+
+                    <div class="booking-detail-item">
+
+                        <span>
+                            Booking ID
+                        </span>
+
+                        <strong id="booking-id">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="booking-detail-item">
+
+                        <span>
+                            Pickup Location
+                        </span>
+
+                        <strong id="booking-location">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="booking-detail-item">
+
+                        <span>
+                            Pickup Date
+                        </span>
+
+                        <strong id="booking-start">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="booking-detail-item">
+
+                        <span>
+                            Return Date
+                        </span>
+
+                        <strong id="booking-end">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="booking-detail-item">
+
+                        <span>
+                            Total Amount
+                        </span>
+
+                        <strong id="booking-total">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="booking-detail-item">
+
+                        <span>
+                            Booking Status
+                        </span>
+
+                        <strong id="booking-status-text">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CUSTOMER INFORMATION -->
+
+            <div class="booking-details-section">
+
+                <h2>
+                    Customer Information
+                </h2>
+
+
+                <div class="booking-details-grid">
+
+
+                    <div class="booking-detail-item">
+
+                        <span>
+                            Full Name
+                        </span>
+
+                        <strong id="customer-name">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="booking-detail-item">
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong id="customer-email">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="booking-detail-item">
+
+                        <span>
+                            Phone Number
+                        </span>
+
+                        <strong id="customer-phone">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SPECIAL REQUEST -->
+
+            <div
+                class="booking-details-section"
+                id="special-request-section">
+
+                <h2>
+                    Special Request
+                </h2>
+
+                <p
+                    id="booking-special-request"
+                    class="special-request-text">
+                    —
+                </p>
+
+            </div>
+
+
+
+            <!-- BUTTONS -->
+
+            <div class="booking-details-actions">
+
+                <a
+                    href="my-bookings.html"
+                    class="booking-details-secondary-button">
+
+                    Back to My Bookings
+
+                </a>
+
+
+                <a
+                    href="dashboard.html"
+                    class="booking-details-primary-button">
+
+                    Dashboard
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= ERROR ================= -->
+
+        <div
+            id="booking-error"
+            class="booking-error"
+            style="display: none;">
+
+            <h2>
+                Booking Not Found
+            </h2>
+
+            <p>
+                The booking you are looking for could not be found.
+            </p>
+
+            <a href="my-bookings.html">
+                Back to My Bookings
+            </a>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                Rento
+            </h2>
+
+            <p>
+                Simple and convenient vehicle rental.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="dashboard.html">
+                Home
+            </a>
+
+            <a href="browse-vehicles.html">
+                Browse Vehicles
+            </a>
+
+            <a href="my-bookings.html">
+                My Bookings
+            </a>
+
+            <a href="my-profile.html">
+                Profile
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Rento. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+<script src="../public/auth.js"></script>
+<script src="../public/data.js"></script>
+<script src="booking-details.js"></script>
+
+</body>
+
+</html>
